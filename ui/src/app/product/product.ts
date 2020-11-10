@@ -4,5 +4,6 @@ export class Product {
     adet: number;
     price: number;
     description: string;
+    userId: number;
 
 }
