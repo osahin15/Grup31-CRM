@@ -1,32 +1,64 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Telefon",
-            "adet": 1000,
-            "price": 1000,
-            "description": "Apple İphone",
-            "userId": 1
-        },
-        {
-            "id": 2,
-            "name": "Laptop",
-            "adet": 100,
-            "price": 2000,
-            "description": "Apple İphone",
-            "userId": 1
-        }
-    ],
-    "user": [
-        {
-            "id": 1,
-            "username": "onur",
-            "password": "123456"
-        },
-        {
-            "id": 2,
-            "username": "oguz",
-            "password": "12345"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Telefon",
+      "adet": 1000,
+      "price": 1000,
+      "description": "Apple İphone",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Laptop",
+      "adet": 100,
+      "price": 2000,
+      "description": "Apple İphone",
+      "userId": 1
+    },
+    {
+      "name": "mouse",
+      "description": "kablosuz",
+      "price": "10",
+      "adet": "10",
+      "id": 3
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "username": "onur",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "username": "oguz",
+      "password": "12345"
+    }
+  ],
+  "customers": [
+    {
+      "userId": 1,
+      "id": 1,
+      "customerName": "Can Tekno Market",
+      "customerPhone": "0(236)357 10 10",
+      "customerMail": "canteknomarket@gmail.com",
+      "customerAddress": "Cumhuriyet Caddesi NO:20 Şehzadeler/Manisa"
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "customerName": "Vatan Bilgisayar",
+      "customerPhone": "0(236)357 12 12",
+      "customerMail": "vatanbilgisayar@info.com",
+      "customerAddress": "Lale Caddesi NO:20 Şehzadeler/Manisa"
+    },
+    {
+      "customerName": "Sami Teknoloji",
+      "customerPhone": "02363571634",
+      "customerMail": "sami@gmail.com",
+      "customerAddress": "Cumhuriyet Mahallesi Hükümet Cad. No:20 Saruhanli/Manisa",
+      "id": 3
+    }
+  ]
 }
