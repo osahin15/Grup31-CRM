@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Customer } from '../customer';
 
 @Component({
   selector: 'app-customer-add',
@@ -8,11 +9,14 @@ import { NgForm } from '@angular/forms';
 })
 export class CustomerAddComponent implements OnInit {
 
-  constructor() { }
+  customer: Customer = new Customer();
 
+  add(form: NgForm){
+
+  }
+
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-
 }
