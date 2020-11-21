@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Telefon",
+            "adet": 1000,
+            "price": 1000,
+            "description": "Apple İphone",
+            "userId": 1
+        },
+        {
+            "id": 2,
+            "name": "Laptop",
+            "adet": 100,
+            "price": 2000,
+            "description": "Apple İphone",
+            "userId": 1
+        }
+    ],
+    "user": [
+        {
+            "id": 1,
+            "username": "onur",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "username": "oguz",
+            "password": "12345"
+        }
+    ]
+}

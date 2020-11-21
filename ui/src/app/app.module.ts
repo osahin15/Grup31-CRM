@@ -11,7 +11,7 @@ import { LoginGuard } from './login/login.guard';
 import { AccountService } from './services/account.service';
 import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [AccountService, LoginGuard],
   bootstrap: [AppComponent]
