@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private accountService: AccountService) { }
   model: User = new User();
+
   ngOnInit(): void {
   }
   login(form: NgForm) {
