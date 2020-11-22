@@ -1,0 +1,55 @@
+<form #orderAddForm="ngForm" (ngSubmit)="add(orderAddForm)">
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Bayi Seçiniz</label>
+
+    <select
+      name="model.customerName"
+      id="customerName"
+      class="form-control form-control-sm"
+      #customerName="ngModel"
+      [(ngModel)]="model.customerName"
+    >
+      <option
+        *ngFor="let customer of customers"
+        [ngValue]="customer.customerName"
+      >
+        {{ customer.customerName }}
+      </option>
+    </select>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputZip">Adet</label>
+      <input
+        #adet="ngModel"
+        [(ngModel)]="model.adet"
+        type="number"
+        class="form-control"
+        name="adet"
+        id="adet"
+        required
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Açıklama</label>
+    <textarea
+      type="text"
+      placeholder="Açıklama"
+      #description="ngModel"
+      [(ngModel)]="model.description"
+      class="form-control"
+      name="description"
+      id="description"
+      required
+      rows="3"
+    ></textarea>
+  </div>
+  <button
+    [disabled]="orderAddForm.invalid"
+    type="button"
+    class="btn btn-success"
+  >
+    Sipariş Gönder
+  </button>
+</form>
