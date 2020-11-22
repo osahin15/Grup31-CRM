@@ -29,6 +29,13 @@
       "price": "1000",
       "adet": "500",
       "id": 4
+    },
+    {
+      "name": "Televizyon",
+      "description": "LG",
+      "price": "2399",
+      "adet": "10",
+      "id": 5
     }
   ],
   "user": [
@@ -73,6 +80,13 @@
       "customerMail": "onur@mail.com",
       "customerAddress": "adresadres",
       "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "customerName": "Can Tekno Market"
     }
   ]
 }

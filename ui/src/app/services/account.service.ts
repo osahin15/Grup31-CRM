@@ -1,10 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../login/user';
 
 @Injectable()
 export class AccountService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   loggedIn = false;
   login(user: User): boolean {
     if (user.username == "onur" && user.password == "123456") {
@@ -22,4 +23,7 @@ export class AccountService {
     localStorage.removeItem("isLogged")
     this.loggedIn = false
   }
+
+
+
 }
