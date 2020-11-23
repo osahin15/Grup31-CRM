@@ -13,6 +13,8 @@ import { CustomerAddComponent } from './customer/customer-add/customer-add.compo
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
+import { OrderComponent } from './order/order.component';
+
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { RegisterComponent } from './register/register.component';
     ProductAddComponent,
     CustomerAddComponent,
     RegisterComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
