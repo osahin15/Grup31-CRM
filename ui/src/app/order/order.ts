@@ -1,3 +1,4 @@
+import { Product } from '../product/product';
 
 
 export class Order {
@@ -5,6 +6,7 @@ export class Order {
     userId: number;
     customerName: string;
     description: string;
+    product: string;
     adet: number;
     date: Date | null;
 }
