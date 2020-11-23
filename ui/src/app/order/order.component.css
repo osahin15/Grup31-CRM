@@ -1,0 +1,9 @@
+.form-group {
+  max-width: 300px;
+  align-items: center;
+  display: center;
+  margin-left: 100px;
+}
+button {
+  margin-left: 100px;
+}

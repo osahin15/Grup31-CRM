@@ -29,6 +29,13 @@
       "price": "1000",
       "adet": "500",
       "id": 4
+    },
+    {
+      "name": "Televizyon",
+      "description": "LG",
+      "price": "2399",
+      "adet": "10",
+      "id": 5
     }
   ],
   "user": [
@@ -73,6 +80,38 @@
       "customerMail": "onur@mail.com",
       "customerAddress": "adresadres",
       "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "customerName": "Can Tekno Market"
+    },
+    {
+      "customerName": "Onur Şahin",
+      "adet": 10,
+      "description": "sdafdf",
+      "id": 2
+    },
+    {
+      "customerName": "Vatan Bilgisayar",
+      "adet": 10,
+      "description": "Vatan Bilgisayar a 10 Adet Bilgisayar",
+      "id": 3
+    },
+    {
+      "customerName": "Can Tekno Market",
+      "adet": 100,
+      "description": "Can tekno 100 Telefon",
+      "id": 4
+    },
+    {
+      "customerName": "Vatan Bilgisayar",
+      "product": "Laptop",
+      "adet": 25,
+      "description": "Vatan a 25 Adet Laptop",
+      "id": 5
     }
   ]
 }
