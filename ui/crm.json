@@ -87,6 +87,31 @@
       "id": 1,
       "userId": 1,
       "customerName": "Can Tekno Market"
+    },
+    {
+      "customerName": "Onur Şahin",
+      "adet": 10,
+      "description": "sdafdf",
+      "id": 2
+    },
+    {
+      "customerName": "Vatan Bilgisayar",
+      "adet": 10,
+      "description": "Vatan Bilgisayar a 10 Adet Bilgisayar",
+      "id": 3
+    },
+    {
+      "customerName": "Can Tekno Market",
+      "adet": 100,
+      "description": "Can tekno 100 Telefon",
+      "id": 4
+    },
+    {
+      "customerName": "Vatan Bilgisayar",
+      "product": "Laptop",
+      "adet": 25,
+      "description": "Vatan a 25 Adet Laptop",
+      "id": 5
     }
   ]
 }

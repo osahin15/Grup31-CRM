@@ -36,9 +36,15 @@
   <div class="row">
     <div class="sub-content">
       <div class="s-part">
-        Hesabınız yok mu?<a class="btn btn-link" (click)="register()"
+        Hesabınız yok mu?<a
+          class="btn btn-link"
+          type="button"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+          (click)="register()"
           >Hesap Oluştur</a
         >
+
         <div></div>
       </div>
     </div>

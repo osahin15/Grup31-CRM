@@ -1,13 +1,40 @@
 <form #orderAddForm="ngForm" (ngSubmit)="add(orderAddForm)">
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Bayi Seçiniz</label>
-
+    <label for="exampleFormControlSelect1">Ürün Seçiniz</label>
     <select
-      name="model.customerName"
-      id="customerName"
+      id="selectedProduct"
+      name="selectedProduct"
       class="form-control form-control-sm"
-      #customerName="ngModel"
-      [(ngModel)]="model.customerName"
+      [(ngModel)]="selectedProduct"
+      (change)="selected()"
+    >
+      <option *ngFor="let product of products" [ngValue]="product.name">
+        {{ product.name }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      placeholder="Ürün Adı"
+      #product="ngModel"
+      [(ngModel)]="model.product"
+      class="form-control"
+      name="product"
+      id="product"
+      required
+      readonly
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Bayi Seçiniz</label>
+    <select
+      id="selectedCustomer"
+      name="selectedCustomer"
+      class="form-control form-control-sm"
+      [(ngModel)]="selectedCustomer"
+      (change)="selected()"
     >
       <option
         *ngFor="let customer of customers"
@@ -16,6 +43,20 @@
         {{ customer.customerName }}
       </option>
     </select>
+  </div>
+
+  <div class="form-group">
+    <input
+      type="text"
+      placeholder="Bayi Adı"
+      #customerName="ngModel"
+      [(ngModel)]="model.customerName"
+      class="form-control"
+      name="customerName"
+      id="customerName"
+      required
+      readonly
+    />
   </div>
   <div class="form-row">
     <div class="form-group col-md-4">
@@ -47,7 +88,7 @@
   </div>
   <button
     [disabled]="orderAddForm.invalid"
-    type="button"
+    type="submit"
     class="btn btn-success"
   >
     Sipariş Gönder
