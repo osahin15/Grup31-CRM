@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { OrderComponent } from './order/order.component';
+import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
 
 
 
@@ -27,6 +28,7 @@ import { OrderComponent } from './order/order.component';
     CustomerAddComponent,
     RegisterComponent,
     OrderComponent,
+    CustomerOrdersComponent,
   ],
   imports: [
     BrowserModule,
