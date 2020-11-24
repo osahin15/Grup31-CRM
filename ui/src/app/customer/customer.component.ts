@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Component, Input, OnInit, Output } from '@angular/core';
+=======
+import { Component, Input, OnInit} from '@angular/core';
+>>>>>>> 038c65c57bc35d726acdc2fc95beb75ec9445e96
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { CustomerService } from '../services/customer.service';
@@ -29,6 +33,5 @@ export class CustomerComponent implements OnInit {
     this.display = !this.display;
     this.name = name;
   }
-
 
 }
