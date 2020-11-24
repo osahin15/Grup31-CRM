@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
+import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
 import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login/login.guard';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'product-add', component: ProductAddComponent },
   { path: 'customer-add', component: CustomerAddComponent },
   { path: 'order-add', component: OrderComponent },
+  { path: 'customer-orders', component: CustomerOrdersComponent },
 
   { path: '**', redirectTo: '' }
 ];

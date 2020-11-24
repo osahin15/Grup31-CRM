@@ -15,6 +15,7 @@
           <span><b>Adres:</b></span
           >{{ customer.customerAddress }}
         </p>
+        <button type="button" class="btn btn-outline-info btn-block" (click)="onPressCallCustomerOrder(customer.customerName)">Siparişler</button>
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">userId:{{ customer.userId }}</small>
         </div>
@@ -22,3 +23,5 @@
     </div>
   </div>
 </div>
+<div *ngIf="display"><app-customer-orders [name]="name"></app-customer-orders></div>
+
