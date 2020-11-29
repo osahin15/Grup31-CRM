@@ -4,29 +4,31 @@
       <div class="card-body">
         <h5 class="card-title">{{ customer.customerName }}</h5>
         <p class="card-text">
-          <span><b>Telefon:</b></span>{{ customer.customerPhone }}
+          <span><b>Telefon:</b></span
+          >{{ customer.customerPhone }}
         </p>
         <p class="card-text">
-          <span><b>E-mail:</b></span>{{ customer.customerMail }}
+          <span><b>E-mail:</b></span
+          >{{ customer.customerMail }}
         </p>
         <p class="card-text">
-          <span><b>Adres:</b></span>{{ customer.customerAddress }}
+          <span><b>Adres:</b></span
+          >{{ customer.customerAddress }}
         </p>
-<<<<<<< HEAD
-        <button type="button" class="btn btn-outline-info btn-block" (click)="onPressCallCustomerOrder(customer.customerName)">Siparişler</button>
-=======
-        <button type="button" class="btn btn-outline-info btn-block"  routerLink="/customer-orders">Siparişler</button>
->>>>>>> 038c65c57bc35d726acdc2fc95beb75ec9445e96
+        <button
+          type="button"
+          class="btn btn-outline-info btn-block"
+          (click)="onPressCallCustomerOrder(customer.customerName)"
+        >
+          Siparişler
+        </button>
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">userId:{{ customer.userId }}</small>
         </div>
       </div>
     </div>
   </div>
-<<<<<<< HEAD
 </div>
-<div *ngIf="display"><app-customer-orders [name]="name"></app-customer-orders></div>
-
-=======
+<div *ngIf="display">
+  <app-customer-orders [name]="name"></app-customer-orders>
 </div>
->>>>>>> 038c65c57bc35d726acdc2fc95beb75ec9445e96

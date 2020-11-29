@@ -82,7 +82,7 @@ namespace ToptanciCRMApi.Controllers
             else
             {
                 Urun urun = mapper.Map<UrunResource, Urun>(urunResource);
-                UrunResponse urunResponse = await urunService.UpdateAsync(urun,id);
+                UrunResponse urunResponse = await urunService.UpdateAsync(urun, id);
                 if (urunResponse.Success)
                 {
                     return Ok(urunResponse.Success);
