@@ -112,6 +112,20 @@
       "adet": 25,
       "description": "Vatan a 25 Adet Laptop",
       "id": 5
+    },
+    {
+      "customerName": "Sami Teknoloji",
+      "product": "mouse",
+      "adet": 10,
+      "description": "10 tane telefon",
+      "id": 6
+    },
+    {
+      "customerName": "Sami Teknoloji",
+      "product": "mouse",
+      "adet": 20,
+      "description": "20 tane mouse",
+      "id": 7
     }
   ]
 }
