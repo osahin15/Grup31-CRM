@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { OrderComponent } from './order/order.component';
 import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
+import { EditProductComponent } from './product/edit-product/edit-product.component';
 
 
 
@@ -29,6 +30,7 @@ import { CustomerOrdersComponent } from './customer/customer-orders/customer-ord
     RegisterComponent,
     OrderComponent,
     CustomerOrdersComponent,
+    EditProductComponent,
   ],
   imports: [
     BrowserModule,

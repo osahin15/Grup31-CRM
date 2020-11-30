@@ -19,16 +19,33 @@ export class ProductService {
 
 
 
-  getProductList(): Observable<Product[]> {
-    return this.http.get<any>(this.APIUrl + '/getlist');
+  getProductList(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/getlist').pipe(
+      tap(result => console.log(JSON.stringify(result))),
+      catchError(this.handleError));
   }
 
-  addProduct(val: any) {
-    return this.http.post(this.APIUrl + '/addurun', val)
+  addProduct(val: Product) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    return this.http.post(this.APIUrl + '/addurun', val, httpOptions)
   }
 
-  updateProduct(val: any) {
-    return this.http.put(this.APIUrl + '/updateurun/', val)
+  updateProduct(val: Product) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    return this.http.put(this.APIUrl + '/updateurun/' + val.urunId, val, httpOptions).pipe(
+      tap(result => console.log(result)),
+      catchError(this.handleError)
+    );
   }
 
   deleteProduct(val: any) {
@@ -69,7 +86,7 @@ export class ProductService {
       catchError(this.handleError)
     )
   }
-
+*/
   handleError(err: HttpErrorResponse) {
     let errorMessage = ''
     if (err.error instanceof ErrorEvent) {
@@ -79,5 +96,5 @@ export class ProductService {
     }
     return throwError(errorMessage)
   }
-*/
+
 }

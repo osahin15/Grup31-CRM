@@ -21,13 +21,39 @@ export class ProductComponent implements OnInit {
   customer: Customer = new Customer();
   customers: Customer[]
 
+  ModalTitle: String;
+
+  ActivateEditComp: boolean = false;
+  pro: Product;
   ProductList: any = [];
+
   ngOnInit(): void {
-    this.refreshDepList();
+    this.refreshProList();
   }
 
-  refreshDepList() {
-    this.productService.getProductList().subscribe(data => {
+  editClick(product) {
+    this.pro = product
+    this.ModalTitle = "Ürün Güncelle";
+    this.ActivateEditComp = true;
+  }
+
+  closeClick() {
+    this.ActivateEditComp = false;
+    this.refreshProList();
+  }
+
+  deleteClick(product) {
+    if (confirm("Silmek istedigine emin misin?")) {
+      this.productService.deleteProduct(product.urunId).subscribe(data => {
+        alert(data.toString());
+        this.refreshProList();
+      })
+    }
+
+  }
+  refreshProList() {
+    this.productService.getProductList().subscribe((data: any[]) => {
+      console.log((data))
       this.products = data;
     });
   }

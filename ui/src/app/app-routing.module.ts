@@ -7,6 +7,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login/login.guard';
 import { OrderComponent } from './order/order.component';
+import { EditProductComponent } from './product/edit-product/edit-product.component';
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';

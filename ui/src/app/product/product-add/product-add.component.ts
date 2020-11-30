@@ -13,12 +13,12 @@ export class ProductAddComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
   model: Product = new Product();
-  user: User = new User();
   ngOnInit(): void {
   }
-  /* add(form: NgForm) {
-     this.productService.addProduct(this.model).subscribe(data => {
-       alert(data.name + "eklendi.")
-     })
-   }*/
+
+  add(form: NgForm) {
+    this.productService.addProduct(this.model).subscribe(data => {
+      alert(data + "eklendi.")
+    })
+  }
 }
