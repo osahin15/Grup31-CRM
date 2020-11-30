@@ -10,9 +10,40 @@ import { tap, catchError } from 'rxjs/operators'
 })
 export class ProductService {
 
+  readonly APIUrl = "https://localhost:5001/api/urun"
 
   constructor(private http: HttpClient) { }
-  path = "http://localhost:3000/products"
+
+
+
+
+
+
+  getProductList(): Observable<Product[]> {
+    return this.http.get<any>(this.APIUrl + '/getlist');
+  }
+
+  addProduct(val: any) {
+    return this.http.post(this.APIUrl + '/addurun', val)
+  }
+
+  updateProduct(val: any) {
+    return this.http.put(this.APIUrl + '/updateurun/', val)
+  }
+
+  deleteProduct(val: any) {
+    return this.http.delete(this.APIUrl + '/deleteurun/' + val)
+  }
+
+  getProductById(val: any) {
+    return this.http.get(this.APIUrl + '/getfindbyid/' + val)
+  }
+
+
+
+
+
+  /*path = "http://localhost:3000/products"
 
   getProducts(userId): Observable<Product[]> {
     let newPath = this.path;
@@ -48,5 +79,5 @@ export class ProductService {
     }
     return throwError(errorMessage)
   }
-
+*/
 }

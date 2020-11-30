@@ -20,12 +20,16 @@ export class ProductComponent implements OnInit {
   products: Product[]
   customer: Customer = new Customer();
   customers: Customer[]
+
+  ProductList: any = [];
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-      this.productService.getProducts(params["userId"]).subscribe(data => {
-        this.products = data
-      })
-    })
+    this.refreshDepList();
+  }
+
+  refreshDepList() {
+    this.productService.getProductList().subscribe(data => {
+      this.products = data;
+    });
   }
 
 

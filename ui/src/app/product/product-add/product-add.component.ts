@@ -16,9 +16,9 @@ export class ProductAddComponent implements OnInit {
   user: User = new User();
   ngOnInit(): void {
   }
-  add(form: NgForm) {
-    this.productService.addProduct(this.model).subscribe(data => {
-      alert(data.name + "eklendi.")
-    })
-  }
+  /* add(form: NgForm) {
+     this.productService.addProduct(this.model).subscribe(data => {
+       alert(data.name + "eklendi.")
+     })
+   }*/
 }
