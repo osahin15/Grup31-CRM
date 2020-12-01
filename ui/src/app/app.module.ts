@@ -13,13 +13,10 @@ import { CustomerAddComponent } from './customer/customer-add/customer-add.compo
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
-<<<<<<< HEAD
-import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
-=======
 import { OrderComponent } from './order/order.component';
 import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
+import { EditProductComponent } from './product/edit-product/edit-product.component';
 
->>>>>>> af82cd885c6aee6497e7f22395b7f8da5d6145c7
 
 
 @NgModule({
@@ -31,15 +28,9 @@ import { CustomerOrdersComponent } from './customer/customer-orders/customer-ord
     ProductAddComponent,
     CustomerAddComponent,
     RegisterComponent,
-<<<<<<< HEAD
-    CustomerOrdersComponent,
-=======
     OrderComponent,
-<<<<<<< HEAD
     CustomerOrdersComponent,
-=======
->>>>>>> af82cd885c6aee6497e7f22395b7f8da5d6145c7
->>>>>>> 038c65c57bc35d726acdc2fc95beb75ec9445e96
+    EditProductComponent,
   ],
   imports: [
     BrowserModule,

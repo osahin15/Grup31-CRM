@@ -1,9 +1,7 @@
 export class Product {
-    id: number;
-    name: string;
-    adet: number;
-    price: number;
-    description: string;
-    userId: number;
+    urunId: number;
+    urunAd: string;
+    urunFiyat: number;
+    kategoriId: number;
 
 }
