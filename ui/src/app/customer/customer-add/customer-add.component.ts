@@ -15,7 +15,7 @@ export class CustomerAddComponent implements OnInit {
   customer: Customer = new Customer();
   add(form: NgForm) {
     this.customerService.addCustomer(this.customer).subscribe(data => {
-      alert(data.customerName + " eklendi.")
+      alert(data + " eklendi.")
     })
   }
 
