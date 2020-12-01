@@ -11,17 +11,12 @@ import { Customer } from '../customer/customer';
 })
 export class CustomerService {
 
-
+  readonly APIUrl = "https://localhost:5001/api/bayi"
   constructor(private http: HttpClient) { }
-  path = "http://localhost:3000/customers"
+
 
   getCustomers(userId): Observable<Customer[]> {
-    let newPath = this.path;
-    if (userId) {
-      newPath += "?userId=" + userId
-    }
-
-    return this.http.get<Customer[]>(newPath).pipe(
+    return this.http.get<Customer[]>(this.APIUrl + '/getlist').pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     )
@@ -34,7 +29,7 @@ export class CustomerService {
         'Authorization': 'Token'
       })
     }
-    return this.http.post<Customer>(this.path, customer, httpOptions).pipe(
+    return this.http.post<Customer>(this.APIUrl, customer, httpOptions).pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     )

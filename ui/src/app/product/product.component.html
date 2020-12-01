@@ -1,5 +1,20 @@
+<div class="form-group">
+  <input
+    class="form-control"
+    id="urunAd"
+    placeholder="Ürün Ara"
+    [(ngModel)]="filterText"
+  />
+  <small *ngIf="filterText" class="form-text text-muted">
+    Şu an <strong>{{ filterText }}</strong> aradınız</small
+  >
+</div>
+
 <div class="row">
-  <div *ngFor="let product of products" class="col-md-4">
+  <div
+    *ngFor="let product of products | productFilter: filterText"
+    class="col-md-4"
+  >
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
         <h5 class="card-title">Urun Ad : {{ product.urunAd }}</h5>
