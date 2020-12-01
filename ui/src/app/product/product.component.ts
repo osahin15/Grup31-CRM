@@ -22,7 +22,7 @@ export class ProductComponent implements OnInit {
   customers: Customer[]
 
   ModalTitle: String;
-
+  filterText: string;
   ActivateEditComp: boolean = false;
   pro: Product;
   ProductList: any = [];
