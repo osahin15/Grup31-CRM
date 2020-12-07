@@ -21,14 +21,11 @@ const routes: Routes = [
   { path: 'order-add', component: OrderComponent },
   { path: 'customer-orders', component: CustomerOrdersComponent },
 
-<<<<<<< HEAD
   { path: 'customers', component: CustomerComponent },
   { path: 'products', component: ProductComponent /*, canActivate: [LoginGuard]*/ },
   { path: 'product-add', component: ProductAddComponent},
   { path: 'customer-add', component: CustomerAddComponent },
   { path: 'customer-orders', component: CustomerOrdersComponent },
-=======
->>>>>>> af82cd885c6aee6497e7f22395b7f8da5d6145c7
   { path: '**', redirectTo: '' }
 ];
 
