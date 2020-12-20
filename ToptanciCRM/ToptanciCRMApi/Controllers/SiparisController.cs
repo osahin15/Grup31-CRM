@@ -87,7 +87,7 @@ namespace ToptanciCRMApi.Controllers
                 return BadRequest(siparisResponse.Message);
             }
         }
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteKategori(int id)
         {
             SiparisResponse siparisResponse = await siparisService.DeleteSiparisAsync(id);

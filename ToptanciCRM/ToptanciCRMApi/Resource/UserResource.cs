@@ -8,9 +8,9 @@ namespace ToptanciCRMApi.Resource
     public class UserResource
     {
         public string Email { get; set; }
-        public string Password { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public string Sifre { get; set; }
+        public string Ad { get; set; }
+        public string Soyad { get; set; }
 
     }
 }
