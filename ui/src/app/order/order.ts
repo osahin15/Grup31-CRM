@@ -1,12 +1,11 @@
 import { Product } from '../product/product';
+import { Siparis } from './siparis';
 
 
 export class Order {
-    id: number;
-    userId: number;
-    customerName: string;
-    description: string;
-    product: string;
-    adet: number;
-    date: Date | null;
+    siparisDetayId: number;
+    adet: number
+    urunId: number
+    siparisId: number
+
 }

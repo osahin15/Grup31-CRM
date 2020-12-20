@@ -18,20 +18,39 @@ export class OrderComponent implements OnInit {
 
   constructor(private orderService: OrderService, private activatedRoute: ActivatedRoute, private customerservice: CustomerService
     , private productService: ProductService) { }
+
+
   selectedCustomer = "Seçiniz..";
   selectedProduct = "Seçiniz..";
+
+  selectedCustomerId = 0;
+  selectedProductId = 0;
 
   model: Order = new Order();
   customers: Customer[] = []
   products: Product[] = []
   ngOnInit(): void {
-
+    this.refreshProList()
   }
 
+
   selected() {
-    this.model.customerName = this.selectedCustomer
-    this.model.product = this.selectedProduct
-    console.log(this.model.customerName)
+
+    this.model.siparisId = this.selectedCustomerId
+    this.model.urunId = this.selectedProductId
+    console.log(this.model.urunId)
+    console.log(this.model.siparisId)
+  }
+
+  refreshProList() {
+    this.productService.getProductList().subscribe((data: any[]) => {
+      console.log((data))
+      this.products = data;
+    });
+    this.customerservice.getCustomers().subscribe((data: any[]) => {
+      console.log((data))
+      this.customers = data;
+    })
   }
 
 
@@ -40,7 +59,7 @@ export class OrderComponent implements OnInit {
 
   add(form: NgForm) {
     this.orderService.addOrder(this.model).subscribe(data => {
-      alert(data.description + "  eklendi.")
+      alert(data.toString + "  eklendi.")
     })
   }
 }
