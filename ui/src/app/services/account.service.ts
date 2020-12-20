@@ -8,10 +8,10 @@ export class AccountService {
   constructor(private http: HttpClient) { }
   loggedIn = false;
   login(user: User): boolean {
-    if (user.username == "onur" && user.password == "123456") {
+    if (user.email == "onur" && user.sifre == "123456") {
 
       this.loggedIn = true;
-      localStorage.setItem("isLogged", user.username)
+      localStorage.setItem("isLogged", user.email)
       return true;
     }
     return false;

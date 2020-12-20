@@ -93,7 +93,7 @@ namespace ToptanciCRMApi.Controllers
                 }
             }
         }
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteUrun(int id)
         {
             UrunResponse urunResponse = await urunService.DeleteAsync(id);

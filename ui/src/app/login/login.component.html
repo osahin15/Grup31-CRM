@@ -2,22 +2,22 @@
   <div class="text-center mb-4">
     <h1 class="h3 mb-3 font-weight-normal">Login</h1>
   </div>
-  <label for="inputEmail" class="sr-only">Kullanıcı Adı</label>
+  <label for="inputEmail" class="sr-only">Email</label>
   <input
     #username="ngModel"
-    [(ngModel)]="model.username"
-    type="text"
+    [(ngModel)]="model.email"
+    type="email"
     id="username"
     name="username"
     class="form-control"
-    placeholder="Kullanıcı Adı"
+    placeholder="E-mail"
     required
     autofocus
   />
   <label for="inputPassword" class="sr-only">Şifre</label>
   <input
     #password="ngModel"
-    [(ngModel)]="model.password"
+    [(ngModel)]="model.sifre"
     type="password"
     id="password"
     name="password"

@@ -79,7 +79,7 @@ namespace ToptanciCRMApi.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> UpdateBayi(BayiResource bayiResource,int id)
+        public async Task<IActionResult> UpdateBayi(BayiResource bayiResource, int id)
         {
             if (!ModelState.IsValid)
             {
@@ -100,10 +100,10 @@ namespace ToptanciCRMApi.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteBayi(int id)
         {
-            BayiResponse bayiResponse= await bayiService.RemoveBayiAsync(id);
+            BayiResponse bayiResponse = await bayiService.RemoveBayiAsync(id);
 
             if (bayiResponse.Success)
             {
