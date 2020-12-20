@@ -20,3 +20,6 @@ body {
 .btn.dropdown-toggle:focus {
   outline: none !important;
 }
+.form-group {
+  margin: 20px;
+}

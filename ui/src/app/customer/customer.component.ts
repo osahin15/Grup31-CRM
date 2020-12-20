@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Component, Input, OnInit, Output } from '@angular/core';
+=======
+import { Component, Input, OnInit } from '@angular/core';
+>>>>>>> bf1f7ef5ee73e23d37af0ff6269efda19f4bbb0d
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { CustomerService } from '../services/customer.service';
@@ -23,10 +27,14 @@ export class CustomerComponent implements OnInit {
       })
     })
   }
+<<<<<<< HEAD
   
   @Input() name:string;
+=======
+  @Input() name: string;
+>>>>>>> bf1f7ef5ee73e23d37af0ff6269efda19f4bbb0d
   display = false;
-  onPressCallCustomerOrder(name:string){
+  onPressCallCustomerOrder(name: string) {
     this.display = !this.display;
     this.name = name;
   }

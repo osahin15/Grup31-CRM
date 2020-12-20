@@ -25,16 +25,7 @@ export class OrderComponent implements OnInit {
   customers: Customer[] = []
   products: Product[] = []
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-      this.customerservice.getCustomers(params["userId"]).subscribe(data => {
-        this.customers = data
-      })
-    })
-    this.activatedRoute.params.subscribe(params => {
-      this.productService.getProducts(params["userId"]).subscribe(data => {
-        this.products = data
-      })
-    })
+
   }
 
   selected() {

@@ -10,9 +10,57 @@ import { tap, catchError } from 'rxjs/operators'
 })
 export class ProductService {
 
+  readonly APIUrl = "https://localhost:5001/api/urun"
 
   constructor(private http: HttpClient) { }
-  path = "http://localhost:3000/products"
+
+
+
+
+
+
+  getProductList(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + '/getlist').pipe(
+      tap(result => console.log(JSON.stringify(result))),
+      catchError(this.handleError));
+  }
+
+  addProduct(val: Product) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    return this.http.post(this.APIUrl + '/addurun', val, httpOptions)
+  }
+
+  updateProduct(val: Product) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    return this.http.put(this.APIUrl + '/updateurun/' + val.urunId, val, httpOptions).pipe(
+      tap(result => console.log(result)),
+      catchError(this.handleError)
+    );
+  }
+
+  deleteProduct(val: any) {
+    return this.http.delete(this.APIUrl + '/deleteurun/' + val)
+  }
+
+  getProductById(val: any) {
+    return this.http.get(this.APIUrl + '/getfindbyid/' + val)
+  }
+
+
+
+
+
+  /*path = "http://localhost:3000/products"
 
   getProducts(userId): Observable<Product[]> {
     let newPath = this.path;
@@ -38,7 +86,7 @@ export class ProductService {
       catchError(this.handleError)
     )
   }
-
+*/
   handleError(err: HttpErrorResponse) {
     let errorMessage = ''
     if (err.error instanceof ErrorEvent) {
