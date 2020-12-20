@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\toptancicrmapi\\ToptanciCRMApi.csproj": {}
+    "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\ToptanciCRMApi\\ToptanciCRMApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\toptancicrmapi\\ToptanciCRMApi.csproj": {
+    "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\ToptanciCRMApi\\ToptanciCRMApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\toptancicrmapi\\ToptanciCRMApi.csproj",
+        "projectUniqueName": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\ToptanciCRMApi\\ToptanciCRMApi.csproj",
         "projectName": "ToptanciCRMApi",
-        "projectPath": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\toptancicrmapi\\ToptanciCRMApi.csproj",
+        "projectPath": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\ToptanciCRMApi\\ToptanciCRMApi.csproj",
         "packagesPath": "C:\\Users\\osahi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\toptancicrmapi\\obj\\",
+        "outputPath": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\ToptanciCRMApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

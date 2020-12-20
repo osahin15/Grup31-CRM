@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SzoONgfGofo2Ys3Z5+jGKCltzZyClGE/Ot6gXKZ+yHnWlinB7Wf6z1Y0FRyGH51fXnexL0fkDAfWZCfLgZK/XQ==",
+  "dgSpecHash": "iaCe8kbusRep+zjynk56snvE2xabVIdzmN4kLcm4uUJkQrm/212xs7de3rNTyc9SwScZRwezlSZ+HXCXs+kQNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\toptancicrmapi\\ToptanciCRMApi.csproj",
+  "projectFilePath": "C:\\Users\\osahi\\Desktop\\Grup31-CRM\\ToptanciCRM\\ToptanciCRMApi\\ToptanciCRMApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\osahi\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\osahi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

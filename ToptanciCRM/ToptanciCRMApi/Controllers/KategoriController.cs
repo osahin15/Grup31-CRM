@@ -94,7 +94,7 @@ namespace ToptanciCRMApi.Controllers
                 }
             }
         }
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteKategori(int id)
         {
             KategoriResponse kategoriResponse = await kategoriService.RemoveKategoriAsync(id);
