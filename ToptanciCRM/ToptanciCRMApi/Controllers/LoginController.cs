@@ -30,7 +30,7 @@ namespace ToptanciCRMApi.Controllers
             }
             else
             {
-                AccessTokenResponse accessTokenResponse = authenticationService.CreateAccesToken(loginResource.Email, loginResource.Password);
+                AccessTokenResponse accessTokenResponse = authenticationService.CreateAccesToken(loginResource.Email, loginResource.Sifre);
 
                 if (accessTokenResponse.Success)
                 {

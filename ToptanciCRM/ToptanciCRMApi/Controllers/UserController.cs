@@ -26,7 +26,7 @@ namespace ToptanciCRMApi.Controllers
             this.userService = userService;
             this.mapper = mapper;
         }
-        [Authorize]
+        [HttpGet]
         public IActionResult GetUser()
         {
             IEnumerable<Claim> claims = User.Claims;

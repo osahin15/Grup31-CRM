@@ -17,11 +17,12 @@
   >
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <h5 class="card-title">Urun Ad : {{ product.urunAd }}</h5>
-        <h4 class="card-title">Urun Id:{{ product.urunId }}</h4>
-        <p class="card-text"><span>Fiyat:</span>{{ product.urunFiyat }}</p>
+        <h5 class="card-title">{{ product.urunAd }}</h5>
+
+        <p class="card-text"><span>Fiyat: </span>{{ product.urunFiyat }}</p>
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">KategoriId:{{ product.kategoriId }}</small>
+          <small class="text-muted">Urun Id:{{ product.urunId }}</small>
         </div>
       </div>
       <button
@@ -52,7 +53,7 @@
       </button>
       <br />
       <button
-        type="submit"
+        type="button"
         class="btn btn-danger"
         (click)="deleteClick(product)"
       >
