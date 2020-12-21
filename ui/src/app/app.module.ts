@@ -13,16 +13,8 @@ import { CustomerAddComponent } from './customer/customer-add/customer-add.compo
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
-<<<<<<< HEAD
 import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
 import { OrderComponent } from './order/order.component';
-=======
-import { OrderComponent } from './order/order.component';
-import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
-import { EditProductComponent } from './product/edit-product/edit-product.component';
-import { ProductFilterPipe } from './product/product-filter.pipe';
-
->>>>>>> bf1f7ef5ee73e23d37af0ff6269efda19f4bbb0d
 
 
 @NgModule({
@@ -34,16 +26,9 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
     ProductAddComponent,
     CustomerAddComponent,
     RegisterComponent,
-<<<<<<< HEAD
     CustomerOrdersComponent,
     OrderComponent,
     CustomerOrdersComponent,
-=======
-    OrderComponent,
-    CustomerOrdersComponent,
-    EditProductComponent,
-    ProductFilterPipe,
->>>>>>> bf1f7ef5ee73e23d37af0ff6269efda19f4bbb0d
   ],
   imports: [
     BrowserModule,
