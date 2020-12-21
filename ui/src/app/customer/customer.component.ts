@@ -17,11 +17,11 @@ export class CustomerComponent implements OnInit {
   customers: Customer[]
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
+    /*this.activatedRoute.params.subscribe(params => {
       this.customerservice.getCustomers(params["userId"]).subscribe(data => {
         this.customers = data
       })
-    })
+    })*/
   }
   
   @Input() name:string;
