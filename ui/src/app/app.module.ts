@@ -17,6 +17,8 @@ import { OrderComponent } from './order/order.component';
 import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
 import { EditProductComponent } from './product/edit-product/edit-product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
+import { CustomerFilterPipe } from './customer/customer-filter.pipe';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 
 
 
@@ -33,6 +35,8 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
     CustomerOrdersComponent,
     EditProductComponent,
     ProductFilterPipe,
+    CustomerFilterPipe,
+    EditCustomerComponent,
   ],
   imports: [
     BrowserModule,

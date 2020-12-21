@@ -15,7 +15,7 @@ export class CustomerService {
   constructor(private http: HttpClient) { }
 
 
-  getCustomers(): Observable<Customer[]> {
+  getCustomerList(): Observable<Customer[]> {
     return this.http.get<Customer[]>(this.APIUrl + '/getlist').pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
@@ -33,6 +33,27 @@ export class CustomerService {
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)
     )
+  }
+
+  updateCustomer(val: Customer) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    return this.http.put(this.APIUrl + '/updatebayi/' + val.bayiId, val, httpOptions).pipe(
+      tap(result => console.log(result)),
+      catchError(this.handleError)
+    );
+  }
+  
+  deleteCustomer(val: any) {
+    return this.http.delete(this.APIUrl + '/deletebayi/' + val)
+  }
+  
+  getCustomerById(val: any) {
+    return this.http.get(this.APIUrl + '/getfindbyid/' + val)
   }
 
   handleError(err: HttpErrorResponse) {
