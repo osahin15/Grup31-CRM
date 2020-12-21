@@ -15,7 +15,7 @@ export class CustomerService {
   constructor(private http: HttpClient) { }
 
 
-  getCustomers(userId): Observable<Customer[]> {
+  getCustomers(): Observable<Customer[]> {
     return this.http.get<Customer[]>(this.APIUrl + '/getlist').pipe(
       tap(data => console.log(JSON.stringify(data))),
       catchError(this.handleError)

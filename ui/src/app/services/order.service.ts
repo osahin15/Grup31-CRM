@@ -10,31 +10,43 @@ import { Order } from '../order/order';
 export class OrderService {
 
   constructor(private http: HttpClient) { }
-  path = "http://localhost:3000/orders"
+  readonly APIUrl = "https://localhost:5001/api/siparisdetay"
 
-  getOrders(userId): Observable<Order[]> {
-    let newPath = this.path;
+
+  getOrders(): Observable<Order[]> {
+    /*let newPath = this.path;
     if (userId) {
       newPath += "?userId=" + userId
-    }
+    }*/
 
-    return this.http.get<Order[]>(newPath).pipe(
-      tap(data => console.log(JSON.stringify(data))),
-      catchError(this.handleError)
-    )
+    return this.http.get<any[]>(this.APIUrl + '/getlist').pipe(
+      tap(result => console.log(JSON.stringify(result))),
+      catchError(this.handleError));
   }
 
-  addOrder(order: Order): Observable<Order> {
+  addOrder(val: Order) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': 'Token'
       })
     }
-    return this.http.post<Order>(this.path, order, httpOptions).pipe(
-      tap(data => console.log(JSON.stringify(data))),
+    return this.http.post(this.APIUrl + '/addsiparisdetay', val, httpOptions)
+  }
+  updateOrder(val: Order) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Token'
+      })
+    }
+    return this.http.put(this.APIUrl + '/updatesiparisdetay/' + val.siparisDetayId, val, httpOptions).pipe(
+      tap(result => console.log(result)),
       catchError(this.handleError)
-    )
+    );
+  }
+  deleteProduct(val: any) {
+    return this.http.delete(this.APIUrl + '/deletesiparisdetay/' + val)
   }
 
   handleError(err: HttpErrorResponse) {

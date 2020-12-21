@@ -1,24 +1,24 @@
-<!--<form #orderAddForm="ngForm" (ngSubmit)="add(orderAddForm)">
+<form #orderAddForm="ngForm" (ngSubmit)="add(orderAddForm)">
   <div class="form-group">
     <label for="exampleFormControlSelect1">Ürün Seçiniz</label>
     <select
-      id="selectedProduct"
-      name="selectedProduct"
+      id="selectedProductId"
+      name="selectedProductId"
       class="form-control form-control-sm"
-      [(ngModel)]="selectedProduct"
+      [(ngModel)]="selectedProductId"
       (change)="selected()"
     >
-      <option *ngFor="let product of products" [ngValue]="product.name">
-        {{ product.name }}
+      <option *ngFor="let product of products" [ngValue]="product.urunId">
+        {{ product.urunAd }}
       </option>
     </select>
   </div>
   <div class="form-group">
     <input
       type="text"
-      placeholder="Ürün Adı"
+      placeholder="Ürün Id"
       #product="ngModel"
-      [(ngModel)]="model.product"
+      [(ngModel)]="model.urunId"
       class="form-control"
       name="product"
       id="product"
@@ -30,17 +30,14 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">Bayi Seçiniz</label>
     <select
-      id="selectedCustomer"
-      name="selectedCustomer"
+      id="selectedCustomerId"
+      name="selectedCustomerId"
       class="form-control form-control-sm"
-      [(ngModel)]="selectedCustomer"
+      [(ngModel)]="selectedCustomerId"
       (change)="selected()"
     >
-      <option
-        *ngFor="let customer of customers"
-        [ngValue]="customer.customerName"
-      >
-        {{ customer.customerName }}
+      <option *ngFor="let customer of customers" [ngValue]="customer.bayiId">
+        {{ customer.bayiAd }}
       </option>
     </select>
   </div>
@@ -48,9 +45,9 @@
   <div class="form-group">
     <input
       type="text"
-      placeholder="Bayi Adı"
+      placeholder="Bayi Id"
       #customerName="ngModel"
-      [(ngModel)]="model.customerName"
+      [(ngModel)]="model.siparisId"
       class="form-control"
       name="customerName"
       id="customerName"
@@ -72,26 +69,12 @@
       />
     </div>
   </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Açıklama</label>
-    <textarea
-      type="text"
-      placeholder="Açıklama"
-      #description="ngModel"
-      [(ngModel)]="model.description"
-      class="form-control"
-      name="description"
-      id="description"
-      required
-      rows="3"
-    ></textarea>
-  </div>
+
   <button
     [disabled]="orderAddForm.invalid"
     type="submit"
     class="btn btn-success"
   >
-    Sipariş Gönder
+    Sipariş Gir
   </button>
-</form>-->
-<p>works!</p>
+</form>
