@@ -21,7 +21,7 @@ export class EditCustomerComponent implements OnInit {
     this.model.bayiAdres = this.cus.bayiAdres;
     this.model.bayiMail = this.cus.bayiMail;
   }
-  updateProduct(form: NgForm) {
+  updateCustomer(form: NgForm) {
     var val = {
       bayiId: this.model.bayiId,
       bayiAd: this.model.bayiAd,

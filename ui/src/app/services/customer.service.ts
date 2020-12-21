@@ -22,17 +22,14 @@ export class CustomerService {
     )
   }
 
-  addCustomer(customer: Customer): Observable<Customer> {
+  addCustomer(customer: Customer) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization': 'Token'
       })
     }
-    return this.http.post<Customer>(this.APIUrl, customer, httpOptions).pipe(
-      tap(data => console.log(JSON.stringify(data))),
-      catchError(this.handleError)
-    )
+    return this.http.post(this.APIUrl + '/addbayi', customer, httpOptions)
   }
 
   updateCustomer(val: Customer) {

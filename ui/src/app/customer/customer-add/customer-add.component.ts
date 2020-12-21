@@ -13,12 +13,13 @@ export class CustomerAddComponent implements OnInit {
 
   constructor(private customerService: CustomerService) { }
   customer: Customer = new Customer();
+
+  ngOnInit(): void {
+  }
+
   add(form: NgForm) {
     this.customerService.addCustomer(this.customer).subscribe(data => {
       alert(data + " eklendi.")
     })
-  }
-
-  ngOnInit(): void {
   }
 }
