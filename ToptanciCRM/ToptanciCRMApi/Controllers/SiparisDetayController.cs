@@ -107,7 +107,7 @@ namespace ToptanciCRMApi.Controllers
                 }
             }
         }
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteSiparisDetay(int id)
         {
             SiparisDetayResponse siparisDetayResponse = await siparisDetayService.RemoveSiparisDetayAsync(id);
