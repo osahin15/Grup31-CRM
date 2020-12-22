@@ -5,31 +5,58 @@
   <div class="form-group">
     <label for="email" class="sr-only">E-mail</label>
     <input
+      #email="ngModel"
+      [(ngModel)]="user.email"
       type="email"
       class="form-control"
       id="email"
+      name="email"
       aria-describedby="emailHelp"
       placeholder="E-mail"
     />
   </div>
   <div class="form-group">
-    <label for="username" class="sr-only">Username</label>
+    <label for="ad" class="sr-only">Ad</label>
     <input
+      #ad="ngModel"
+      [(ngModel)]="user.ad"
       type="text"
       class="form-control"
-      id="username"
-      aria-describedby="emailHelp"
-      placeholder="Enter Username"
+      id="ad"
+      name="ad"
+      placeholder="Ad"
+    />
+  </div>
+  <div class="form-group">
+    <label for="soyad" class="sr-only">Soyad</label>
+    <input
+      #soyad="ngModel"
+      name="soyad"
+      [(ngModel)]="user.soyad"
+      type="text"
+      class="form-control"
+      id="soyad"
+      placeholder="Soyad"
     />
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1" class="sr-only">Password</label>
     <input
+      #password="ngModel"
+      [(ngModel)]="user.sifre"
       type="password"
       class="form-control"
-      id="exampleInputPassword1"
-      placeholder="Password"
+      id="sifre"
+      name="sifre"
+      placeholder="Sifre"
     />
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    (click)="register(user)"
+    routerLink="/login"
+  >
+    Submit
+  </button>
 </form>
