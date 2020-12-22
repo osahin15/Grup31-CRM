@@ -8,15 +8,16 @@ import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { LoginGuard } from './login/login.guard';
-import { AccountService } from './services/account.service';
 import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { OrderComponent } from './order/order.component';
 import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
 import { EditProductComponent } from './product/edit-product/edit-product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -40,7 +41,12 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AccountService, LoginGuard],
+  providers: [AuthService, LoginGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

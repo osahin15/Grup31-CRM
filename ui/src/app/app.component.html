@@ -1,5 +1,9 @@
 <body>
-  <div>
+  <div *ngIf="isLoggedIn() == false">
+    <app-login></app-login>
+  </div>
+
+  <div *ngIf="isLoggedIn()">
     <nav
       class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
     >
@@ -18,7 +22,7 @@
 
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a *ngIf="isLoggedIn() == true" (click)="logOut()" class="nav-link">
+          <a *ngIf="isLoggedIn()" (click)="logOut()" class="nav-link">
             Logout
           </a>
         </li>
