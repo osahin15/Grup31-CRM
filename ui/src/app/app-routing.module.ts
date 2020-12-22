@@ -14,14 +14,14 @@ import { RegisterComponent } from './register/register.component';
 import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent, pathMatch: 'full' },
-  { path: 'register', component: RegisterComponent },
-  { path: 'customers', component: CustomerComponent },
-  { path: 'products', component: ProductComponent },
-  { path: 'product-add', component: ProductAddComponent },
-  { path: 'customer-add', component: CustomerAddComponent },
-  { path: 'order-add', component: OrderComponent },
-  { path: 'customer-orders', component: CustomerOrdersComponent },
+  { path: '', component: CustomerComponent, pathMatch: 'full', canActivate: [LoginGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'customers', component: CustomerComponent, canActivate: [LoginGuard] },
+  { path: 'products', component: ProductComponent, canActivate: [LoginGuard] },
+  { path: 'product-add', component: ProductAddComponent, canActivate: [LoginGuard] },
+  { path: 'customer-add', component: CustomerAddComponent, canActivate: [LoginGuard] },
+  { path: 'order-add', component: OrderComponent, canActivate: [LoginGuard] },
+  { path: 'customer-orders', component: CustomerOrdersComponent, canActivate: [LoginGuard] },
 
   { path: '**', redirectTo: '' }
 ];

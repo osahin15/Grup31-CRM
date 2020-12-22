@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AccountService } from './services/account.service';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +7,16 @@ import { AccountService } from './services/account.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private accountService: AccountService) {
+  constructor(private authService: AuthService) {
 
   }
   title = 'CRM';
 
   isLoggedIn() {
-    return this.accountService.isLoggedIn();
+    return this.authService.isAuthenticated
   }
+
   logOut() {
-    this.accountService.logOut();
+    this.authService.logOut()
   }
 }
