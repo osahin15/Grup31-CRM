@@ -11,6 +11,7 @@ import { EditProductComponent } from './product/edit-product/edit-product.compon
 import { ProductAddComponent } from './product/product-add/product-add.component';
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 
 const routes: Routes = [
   { path: '', component: CustomerComponent, pathMatch: 'full', canActivate: [LoginGuard] },

@@ -47,7 +47,7 @@ export class OrderComponent implements OnInit {
       console.log((data))
       this.products = data;
     });
-    this.customerservice.getCustomers().subscribe((data: any[]) => {
+    this.customerservice.getCustomerList().subscribe((data: any[]) => {
       console.log((data))
       this.customers = data;
     })

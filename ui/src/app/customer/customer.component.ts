@@ -12,22 +12,44 @@ import { Customer } from './customer';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor(private customerservice: CustomerService, private activatedRoute: ActivatedRoute) { }
+  constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute) { }
   customer: Customer = new Customer();
   customers: Customer[]
 
+  ModalTitle: String;
+  filterText: string;
+  ActivatedEditComp: boolean = false;
+  cus: Customer;
+  CustomerList: any = [];
+
   ngOnInit(): void {
-    /*this.activatedRoute.params.subscribe(params => {
-      this.customerservice.getCustomers(params["userId"]).subscribe(data => {
-        this.customers = data
-      })
-    })*/
-  }
-  @Input() name: string;
-  display = false;
-  onPressCallCustomerOrder(name: string) {
-    this.display = !this.display;
-    this.name = name;
+    this.refreshCustomerList();
   }
 
+  editClick(customer) {
+    this.cus = customer
+    this.ModalTitle = "Bayi Güncelle";
+    this.ActivatedEditComp = true;
+  }
+
+  closeClick() {
+    this.ActivatedEditComp = false;
+    this.refreshCustomerList();
+  }
+
+  deleteClick(customer) {
+    if (confirm("Silmek istedigine emin misin?")) {
+      this.customerService.deleteCustomer(customer.bayiId).subscribe(data => {
+        alert(data.toString());
+        this.refreshCustomerList();
+      })
+    }
+  }
+
+  refreshCustomerList() {
+    this.customerService.getCustomerList().subscribe((data: any[]) => {
+      console.log((data))
+      this.customers = data;
+    });
+  }
 }

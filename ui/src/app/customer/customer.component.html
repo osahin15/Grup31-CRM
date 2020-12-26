@@ -1,30 +1,105 @@
+<div class="form-group">
+  <input class="form-control" id="bayiAd" placeholder="Bayi Ara" [(ngModel)]="filterText" />
+  <small *ngIf="filterText" class="form-text text-muted">
+    Şu an <strong>{{ filterText }}</strong> aradınız</small>
+</div>
+
 <div class="row">
-  <div *ngFor="let customer of customers" class="col-md-4">
+  <div *ngFor="let customer of customers | customerFilter: filterText" class="col-md-4">
     <div class="card mb-4 shadow-sm">
       <div class="card-body">
-        <h5 class="card-title">{{ customer.customerName }}</h5>
+        <h5 class="card-title">{{ customer.bayiAd }}</h5>
         <p class="card-text">
-          <span><b>Telefon:</b></span
-          >{{ customer.customerPhone }}
+          <span><b>E-mail: </b></span>{{ customer.bayiMail }}
         </p>
         <p class="card-text">
-          <span><b>E-mail:</b></span
-          >{{ customer.customerMail }}
+          <span><b>Adres: </b></span>{{ customer.bayiAdres }}
         </p>
-        <p class="card-text">
-          <span><b>Adres:</b></span
-          >{{ customer.customerAddress }}
-        </p>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">userId:{{ customer.bayiId }}</small>
+        </div>
+      </div>
+      <button type="button" class="btn btn-outline-info btn-block" routerLink="/customer-orders">
+        Siparişler
+      </button>
+      <br />
+      <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#editModal"
+      (click)="editClick(customer)"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <svg
+        width="1em"
+        height="1em"
+        viewBox="0 0 16 16"
+        class="bi bi-pencil-square"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
+        />
+      </svg>
+    </button>
+    <br />
+    <button
+    type="button"
+    class="btn btn-danger"
+    (click)="deleteClick(customer)"
+  >
+    <svg
+      width="1em"
+      height="1em"
+      viewBox="0 0 16 16"
+      class="bi bi-trash-fill"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"
+      />
+    </svg>
+  </button>
+    </div>
+  </div>
+</div>
+<div
+  name="editModal"
+  class="modal fade"
+  id="editModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="editModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog model-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">{{ ModalTitle }}</h5>
         <button
           type="button"
-          class="btn btn-outline-info btn-block"
-          routerLink="/customer-orders"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="closeClick()"
         >
-          Siparişler
+          <span aria-hidden="true">&times;</span>
         </button>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">userId:{{ customer.userId }}</small>
-        </div>
+      </div>
+      <div class="modal-body">
+        <app-edit-customer
+          [cus]="cus"
+          *ngIf="ActivatedEditComp"
+        ></app-edit-customer>
       </div>
     </div>
   </div>

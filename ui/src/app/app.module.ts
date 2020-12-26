@@ -16,8 +16,13 @@ import { OrderComponent } from './order/order.component';
 import { CustomerOrdersComponent } from './customer/customer-orders/customer-orders.component';
 import { EditProductComponent } from './product/edit-product/edit-product.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
+<<<<<<< HEAD
+import { CustomerFilterPipe } from './customer/customer-filter.pipe';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+=======
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { AuthService } from './services/auth.service';
+>>>>>>> a68317b0ae549633ab80181442056f8a8bcf6926
 
 
 
@@ -34,6 +39,8 @@ import { AuthService } from './services/auth.service';
     CustomerOrdersComponent,
     EditProductComponent,
     ProductFilterPipe,
+    CustomerFilterPipe,
+    EditCustomerComponent,
   ],
   imports: [
     BrowserModule,
