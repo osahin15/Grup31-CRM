@@ -1,0 +1,81 @@
+<form #customerAddForm="ngForm" (ngSubmit)="updateCustomer(customerAddForm)">
+    <div class="form-group row">
+      <label>Bayi Id</label>
+      <input
+        type="number"
+        placeholder="Bayi Id"
+        #bayiId="ngModel"
+        [(ngModel)]="model.bayiId"
+        class="form-control"
+        name="bayiId"
+        id="bayiId"
+        required
+        readonly
+      />
+      <div *ngIf="bayiId.invalid && bayiId.dirty" class="alert alert-danger">
+        Bayi Id gereklidir
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Bayi Adı</label>
+      <input
+        type="text"
+        placeholder="Bayi Adı"
+        #bayiAd="ngModel"
+        [(ngModel)]="model.bayiAd"
+        class="form-control"
+        name="bayiAd"
+        id="bayiAd"
+        required
+      />
+      <div *ngIf="bayiAd.invalid && bayiAd.dirty" class="alert alert-danger">
+        Bayi adı gereklidir
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label>Bayi Mail</label>
+      <input
+        type="text"
+        placeholder="Bayi Mail"
+        #bayiMail="ngModel"
+        [(ngModel)]="model.bayiMail"
+        class="form-control"
+        name="bayiMail"
+        id="bayiMail"
+        required
+      />
+      <div
+        *ngIf="bayiMail.invalid && bayiMail.dirty"
+        class="alert alert-danger"
+      >
+        Mail gereklidir
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Bayi Adres</label>
+      <input
+        type="text"
+        placeholder="Bayi Adres"
+        #bayiAdres="ngModel"
+        [(ngModel)]="model.bayiAdres"
+        class="form-control"
+        name="bayiAdres"
+        id="bayiAdres"
+        required
+      />
+      <div
+        *ngIf="bayiAdres.invalid && bayiAdres.dirty"
+        class="alert alert-danger"
+      >
+        Bayi adresi gereklidir.
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="customerAddForm.invalid"
+    >
+      Güncelle
+    </button>
+  </form>
