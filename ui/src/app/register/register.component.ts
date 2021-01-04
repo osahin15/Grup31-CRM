@@ -12,6 +12,9 @@ export class RegisterComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
   user: RegisterUser = new RegisterUser();
+
+  cevap: String;
+  sorular: String[] = ["  İlkokuldaki İlk Öğretmeninizin Adı?", "İlk sahip olduğunuz evcil hayvan Adı?"]
   ngOnInit(): void {
   }
 

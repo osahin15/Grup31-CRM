@@ -1,4 +1,4 @@
-<form class="form-signin">
+<form class="form-signin" name="registerForm" id="registerForm" #registerForm>
   <div class="text-center mb-4">
     <h1 class="h3 mb-3 font-weight-normal">Üye Ol</h1>
   </div>
@@ -11,9 +11,15 @@
       class="form-control"
       id="email"
       name="email"
+      ngModel
+      email
       aria-describedby="emailHelp"
       placeholder="E-mail"
+      required
     />
+    <div *ngIf="email.invalid && email.dirty" class="alert alert-danger">
+      E-mail girilmedi veya Hatalı Girildi
+    </div>
   </div>
   <div class="form-group">
     <label for="ad" class="sr-only">Ad</label>
@@ -25,6 +31,7 @@
       id="ad"
       name="ad"
       placeholder="Ad"
+      required
     />
   </div>
   <div class="form-group">
@@ -37,22 +44,50 @@
       class="form-control"
       id="soyad"
       placeholder="Soyad"
+      required
     />
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1" class="sr-only">Password</label>
     <input
-      #password="ngModel"
+      #sifre="ngModel"
       [(ngModel)]="user.sifre"
       type="password"
       class="form-control"
       id="sifre"
       name="sifre"
       placeholder="Sifre"
+      required
     />
   </div>
+  <div class="form-group">
+    <select
+      id="sifreKurtarma"
+      name="sifreKurtarma"
+      class="form-control form-control-sm"
+    >
+      <option *ngFor="let soru of sorular">
+        {{ soru }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="cevap" class="sr-only">Cevap</label>
+    <input
+      name="cevap"
+      #cevap="ngModel"
+      [(ngModel)]="user.cevap"
+      type="text"
+      class="form-control"
+      id="cevap"
+      placeholder="Cevap"
+      required
+    />
+  </div>
+
   <button
     type="submit"
+    [disabled]="email.invalid && sifre.invalid"
     class="btn btn-primary"
     (click)="register(user)"
     routerLink="/login"

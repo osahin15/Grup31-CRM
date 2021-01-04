@@ -36,6 +36,16 @@
   <div class="row">
     <div class="sub-content">
       <div class="s-part">
+        <a
+          type="button"
+          class="btn btn-link"
+          data-toggle="modal"
+          data-target="#exampleModal_"
+          data-backdrop="static"
+          (click)="forgotPassClick()"
+          data-keyboard="false"
+          >Şifremi Unuttum</a
+        >
         Hesabınız yok mu?<a
           type="button"
           class="btn btn-link"
@@ -80,6 +90,36 @@
       </div>
       <div class="modal-body">
         <app-register *ngIf="ActivateEditComp"></app-register>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  name="exampleModal_"
+  class="modal fade"
+  id="exampleModal_"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog model-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Şifremi Unuttum</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+          (click)="closeClick()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-forgotpassword *ngIf="ActivateEditComp"></app-forgotpassword>
       </div>
     </div>
   </div>

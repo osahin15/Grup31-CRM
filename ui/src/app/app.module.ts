@@ -18,6 +18,7 @@ import { EditProductComponent } from './product/edit-product/edit-product.compon
 import { ProductFilterPipe } from './product/product-filter.pipe';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { AuthService } from './services/auth.service';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 
@@ -34,6 +35,7 @@ import { AuthService } from './services/auth.service';
     CustomerOrdersComponent,
     EditProductComponent,
     ProductFilterPipe,
+    ForgotpasswordComponent,
   ],
   imports: [
     BrowserModule,

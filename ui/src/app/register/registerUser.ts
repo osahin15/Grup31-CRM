@@ -4,5 +4,6 @@ export class RegisterUser {
     sifre: string;
     ad: string;
     soyad: string;
+    cevap: String
 
 }
