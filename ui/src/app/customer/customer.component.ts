@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Component, Input, OnInit } from '@angular/core';
-=======
 import { Component, Input, OnInit, Output } from '@angular/core';
->>>>>>> master
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { CustomerService } from '../services/customer.service';

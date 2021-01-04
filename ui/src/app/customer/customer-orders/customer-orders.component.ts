@@ -12,14 +12,6 @@ import { Customer } from '../customer';
 })
 export class CustomerOrdersComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor(private customerservice: CustomerService, private activatedRoute: ActivatedRoute) { }
-  customer: Customer = new Customer();
-  customers: Customer[];
-
-  ngOnInit(): void {
-
-=======
   customerOrder: Order = new Order();
   customerOrders: Order[];
 
@@ -29,12 +21,7 @@ export class CustomerOrdersComponent implements OnInit {
   @Input() name: string;
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => {
-      this.orderService.getOrders(params["userId"]).subscribe(data => {
-        this.customerOrders = data
-      })
-    })
->>>>>>> master
+
   }
 
 }
