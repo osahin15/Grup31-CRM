@@ -19,6 +19,8 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { AuthService } from './services/auth.service';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { CustomerFilterPipe } from './customer/customer-filter.pipe';
 
 
 
@@ -33,12 +35,11 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     RegisterComponent,
     OrderComponent,
     CustomerOrdersComponent,
-<<<<<<< HEAD
     EditProductComponent,
     ProductFilterPipe,
+    CustomerFilterPipe,
     ForgotpasswordComponent,
-=======
->>>>>>> master
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,
