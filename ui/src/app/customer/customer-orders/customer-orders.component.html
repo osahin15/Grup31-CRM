@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h5></h5>
 <table class="table table-sm table-hover">
   <thead>
@@ -29,3 +30,30 @@
     </tr>
   </tbody>
 </table>
+=======
+<div *ngFor="let customerOrder of customerOrders">
+  <table
+    *ngIf="name == customerOrder.customerName"
+    class="table table-sm table-hover"
+  >
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Bayi Adı</th>
+        <th scope="col">Ürün</th>
+        <th scope="col">Açıklama</th>
+        <th scope="col">Adet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info">
+        <th scope="row">1</th>
+        <td>{{ customerOrder.customerName }}</td>
+        <td>{{ customerOrder.product }}</td>
+        <td>{{ customerOrder.description }}</td>
+        <td>{{ customerOrder.adet }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+>>>>>>> master

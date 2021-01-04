@@ -33,9 +33,12 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     RegisterComponent,
     OrderComponent,
     CustomerOrdersComponent,
+<<<<<<< HEAD
     EditProductComponent,
     ProductFilterPipe,
     ForgotpasswordComponent,
+=======
+>>>>>>> master
   ],
   imports: [
     BrowserModule,

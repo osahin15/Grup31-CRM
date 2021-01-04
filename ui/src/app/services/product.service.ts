@@ -10,10 +10,24 @@ import { tap, catchError } from 'rxjs/operators'
 })
 export class ProductService {
 
+<<<<<<< HEAD
   readonly APIUrl = "https://localhost:5001/api/urun"
+=======
+  readonly APIUrl = " https://localhost:5001/api"
+>>>>>>> master
 
   constructor(private http: HttpClient) { }
 
+<<<<<<< HEAD
+=======
+
+
+  getProducts(userId): Observable<Product[]> {
+    let newPath = this.path;
+    if (userId) {
+      newPath += "?userId=" + userId
+    }
+>>>>>>> master
 
 
 
