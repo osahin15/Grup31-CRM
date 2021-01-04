@@ -1,0 +1,81 @@
+<form #productAddForm="ngForm" (ngSubmit)="updateProduct(productAddForm)">
+  <div class="form-group row">
+    <label>Ürün Id</label>
+    <input
+      type="number"
+      placeholder="Ürün Id"
+      #urunId="ngModel"
+      [(ngModel)]="model.urunId"
+      class="form-control"
+      name="urunId"
+      id="urunId"
+      required
+      readonly
+    />
+    <div *ngIf="urunId.invalid && urunId.dirty" class="alert alert-danger">
+      Ürün Id gereklidir
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Ürün Adı</label>
+    <input
+      type="text"
+      placeholder="Ürün adı"
+      #urunAd="ngModel"
+      [(ngModel)]="model.urunAd"
+      class="form-control"
+      name="urunAd"
+      id="urunAd"
+      required
+    />
+    <div *ngIf="urunAd.invalid && urunAd.dirty" class="alert alert-danger">
+      Ürün isimi gereklidir
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Ürün Fiyat</label>
+    <input
+      type="number"
+      placeholder="Ürün fiyatı"
+      #urunFiyat="ngModel"
+      [(ngModel)]="model.urunFiyat"
+      class="form-control"
+      name="urunFiyat"
+      id="urunFiyat"
+      required
+    />
+    <div
+      *ngIf="urunFiyat.invalid && urunFiyat.dirty"
+      class="alert alert-danger"
+    >
+      Fiyat gereklidir
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Ürün Kategori Id</label>
+    <input
+      type="number"
+      placeholder="Kategori Id"
+      #kategoriId="ngModel"
+      [(ngModel)]="model.kategoriId"
+      class="form-control"
+      name="kategoriId"
+      id="kategoriId"
+      required
+    />
+    <div
+      *ngIf="kategoriId.invalid && kategoriId.dirty"
+      class="alert alert-danger"
+    >
+      Kategori Id gereklidir.
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="productAddForm.invalid"
+  >
+    Güncelle
+  </button>
+</form>
