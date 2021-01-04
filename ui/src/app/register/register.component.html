@@ -1,35 +1,97 @@
-<form class="form-signin">
+<form class="form-signin" name="registerForm" id="registerForm" #registerForm>
   <div class="text-center mb-4">
     <h1 class="h3 mb-3 font-weight-normal">Üye Ol</h1>
   </div>
   <div class="form-group">
     <label for="email" class="sr-only">E-mail</label>
     <input
+      #email="ngModel"
+      [(ngModel)]="user.email"
       type="email"
       class="form-control"
       id="email"
+      name="email"
+      ngModel
+      email
       aria-describedby="emailHelp"
       placeholder="E-mail"
+      required
+    />
+    <div *ngIf="email.invalid && email.dirty" class="alert alert-danger">
+      E-mail girilmedi veya Hatalı Girildi
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ad" class="sr-only">Ad</label>
+    <input
+      #ad="ngModel"
+      [(ngModel)]="user.ad"
+      type="text"
+      class="form-control"
+      id="ad"
+      name="ad"
+      placeholder="Ad"
+      required
     />
   </div>
   <div class="form-group">
-    <label for="username" class="sr-only">Username</label>
+    <label for="soyad" class="sr-only">Soyad</label>
     <input
+      #soyad="ngModel"
+      name="soyad"
+      [(ngModel)]="user.soyad"
       type="text"
       class="form-control"
-      id="username"
-      aria-describedby="emailHelp"
-      placeholder="Enter Username"
+      id="soyad"
+      placeholder="Soyad"
+      required
     />
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1" class="sr-only">Password</label>
     <input
+      #sifre="ngModel"
+      [(ngModel)]="user.sifre"
       type="password"
       class="form-control"
-      id="exampleInputPassword1"
-      placeholder="Password"
+      id="sifre"
+      name="sifre"
+      placeholder="Sifre"
+      required
     />
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="form-group">
+    <select
+      id="sifreKurtarma"
+      name="sifreKurtarma"
+      class="form-control form-control-sm"
+    >
+      <option *ngFor="let soru of sorular">
+        {{ soru }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="cevap" class="sr-only">Cevap</label>
+    <input
+      name="cevap"
+      #cevap="ngModel"
+      [(ngModel)]="user.cevap"
+      type="text"
+      class="form-control"
+      id="cevap"
+      placeholder="Cevap"
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="email.invalid && sifre.invalid"
+    class="btn btn-primary"
+    (click)="register(user)"
+    routerLink="/login"
+  >
+    Submit
+  </button>
 </form>

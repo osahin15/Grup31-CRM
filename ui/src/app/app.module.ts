@@ -22,7 +22,13 @@ import { EditCustomerComponent } from './customer/edit-customer/edit-customer.co
 =======
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { AuthService } from './services/auth.service';
+<<<<<<< HEAD
 >>>>>>> a68317b0ae549633ab80181442056f8a8bcf6926
+=======
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { CustomerFilterPipe } from './customer/customer-filter.pipe';
+>>>>>>> d2cdbdc48873cb6e2054c91476c9e900d3f7e97e
 
 
 
@@ -40,7 +46,12 @@ import { AuthService } from './services/auth.service';
     EditProductComponent,
     ProductFilterPipe,
     CustomerFilterPipe,
+<<<<<<< HEAD
     EditCustomerComponent,
+=======
+    ForgotpasswordComponent,
+    EditCustomerComponent
+>>>>>>> d2cdbdc48873cb6e2054c91476c9e900d3f7e97e
   ],
   imports: [
     BrowserModule,

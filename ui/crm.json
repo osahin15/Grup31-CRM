@@ -126,6 +126,13 @@
       "adet": 20,
       "description": "20 tane mouse",
       "id": 7
+    },
+    {
+      "customerName": "Vatan Bilgisayar",
+      "product": "Laptop",
+      "adet": 100,
+      "description": "Vatan A 100 Laptop.",
+      "id": 8
     }
   ]
 }

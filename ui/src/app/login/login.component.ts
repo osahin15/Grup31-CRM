@@ -29,6 +29,10 @@ export class LoginComponent implements OnInit {
     this.ActivateEditComp = true;
   }
 
+  forgotPassClick() {
+    this.ActivateEditComp = true;
+  }
+
   closeClick() {
     this.ActivateEditComp = false;
   }
