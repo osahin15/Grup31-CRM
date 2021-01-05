@@ -12,6 +12,7 @@ import { ProductAddComponent } from './product/product-add/product-add.component
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
 import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: CustomerComponent, pathMatch: 'full', canActivate: [LoginGuard] },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'customer-add', component: CustomerAddComponent, canActivate: [LoginGuard] },
   { path: 'order-add', component: OrderComponent, canActivate: [LoginGuard] },
   { path: 'customer-orders', component: CustomerOrdersComponent, canActivate: [LoginGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [LoginGuard]},
 
   { path: '**', redirectTo: '' }
 ];
