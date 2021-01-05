@@ -21,6 +21,7 @@ import { AuthService } from './services/auth.service';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 import { CustomerFilterPipe } from './customer/customer-filter.pipe';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -40,7 +41,7 @@ import { CustomerFilterPipe } from './customer/customer-filter.pipe';
     CustomerFilterPipe,
     EditCustomerComponent,
     ForgotpasswordComponent,
-    EditCustomerComponent
+    EditCustomerComponent,
   ],
   imports: [
     BrowserModule,
