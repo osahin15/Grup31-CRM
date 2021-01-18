@@ -19,16 +19,11 @@ export class CustomerComponent implements OnInit {
   ModalTitle: String;
   filterText: string;
   ActivatedEditComp: boolean = false;
-<<<<<<< HEAD
-=======
-
->>>>>>> d2cdbdc48873cb6e2054c91476c9e900d3f7e97e
   cus: Customer;
   CustomerList: any = [];
 
   ngOnInit(): void {
     this.refreshCustomerList();
-<<<<<<< HEAD
   }
 
   editClick(customer) {
@@ -37,16 +32,6 @@ export class CustomerComponent implements OnInit {
     this.ActivatedEditComp = true;
   }
 
-=======
-  }
-
-  editClick(customer) {
-    this.cus = customer
-    this.ModalTitle = "Bayi Güncelle";
-    this.ActivatedEditComp = true;
-  }
-
->>>>>>> d2cdbdc48873cb6e2054c91476c9e900d3f7e97e
   closeClick() {
     this.ActivatedEditComp = false;
     this.refreshCustomerList();

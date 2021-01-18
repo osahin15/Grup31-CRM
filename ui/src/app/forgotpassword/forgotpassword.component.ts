@@ -12,7 +12,15 @@ export class ForgotpasswordComponent implements OnInit {
 
   user: RegisterUser = new RegisterUser();
 
+
+
   ngOnInit(): void {
+
   }
+
+
+
+  cevap: String;
+  sorular: String[] = ["  İlkokuldaki İlk Öğretmeninizin Adı?", "İlk sahip olduğunuz evcil hayvan Adı?"]
 
 }

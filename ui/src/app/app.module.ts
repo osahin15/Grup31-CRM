@@ -21,7 +21,7 @@ import { AuthService } from './services/auth.service';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 import { CustomerFilterPipe } from './customer/customer-filter.pipe';
-import { NgxCaptchaModule } from 'ngx-captcha';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -41,14 +41,14 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     CustomerFilterPipe,
     EditCustomerComponent,
     ForgotpasswordComponent,
-    EditCustomerComponent
+    EditCustomerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxCaptchaModule
+
   ],
   providers: [AuthService, LoginGuard,
     {
