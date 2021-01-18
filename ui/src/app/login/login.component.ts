@@ -13,8 +13,11 @@ import { User } from './user';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {
+    this.siteKey = "6LefzzEaAAAAANmA0hnfd9pC0lUE6i2ReTZOFSoC"
+  }
   user: User = new User();
+  siteKey: string;
   ActivateEditComp: boolean = false;
   ngOnInit(): void {
   }
