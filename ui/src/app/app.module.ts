@@ -51,7 +51,6 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     FormsModule,
     HttpClientModule,
     NgxCaptchaModule
-
   ],
   providers: [AuthService, LoginGuard,
     {
