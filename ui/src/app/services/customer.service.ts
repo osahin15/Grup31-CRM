@@ -4,6 +4,7 @@ import { Product } from '../product/product';
 import { Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators'
 import { Customer } from '../customer/customer';
+import { City } from '../customer/customer-add/city';
 
 
 @Injectable({
@@ -14,6 +15,14 @@ export class CustomerService {
   readonly APIUrl = "https://localhost:5001/api/bayi"
   constructor(private http: HttpClient) { }
 
+  cityApi = " http://localhost:3000/iller"
+
+  getCity() {
+    return this.http.get<City[]>(this.cityApi).pipe(
+      tap(data => console.log(JSON.stringify(data))),
+      catchError(this.handleError)
+    )
+  }
 
   getCustomerList(): Observable<Customer[]> {
     return this.http.get<Customer[]>(this.APIUrl + '/getlist').pipe(
@@ -44,11 +53,11 @@ export class CustomerService {
       catchError(this.handleError)
     );
   }
-  
+
   deleteCustomer(val: any) {
     return this.http.delete(this.APIUrl + '/deletebayi/' + val)
   }
-  
+
   getCustomerById(val: any) {
     return this.http.get(this.APIUrl + '/getfindbyid/' + val)
   }

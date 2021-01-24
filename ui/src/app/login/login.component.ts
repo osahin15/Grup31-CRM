@@ -21,6 +21,8 @@ export class LoginComponent implements OnInit {
   ActivateEditComp: boolean = false;
   ngOnInit(): void {
   }
+
+  click: number = 0
   login(user: User) {
     this.authService.login(user)
   }
@@ -28,6 +30,7 @@ export class LoginComponent implements OnInit {
   isLoggedIn(): boolean {
     return this.authService.isAuthenticated
   }
+
   registerClick() {
     this.ActivateEditComp = true;
   }

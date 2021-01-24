@@ -1,27 +1,58 @@
 <h3>Yeni müşteri ekle</h3>
 <form #customerAddForm="ngForm" (ngSubmit)="add(customerAddForm)">
   <div class="form-group">
-    <input type="text" placeholder="Müşteri adı" #bayiAd="ngModel" [(ngModel)]="customer.bayiAd"
-      class="form-control" name="bayiAd" id="bayiAd" required />
+    <input
+      type="text"
+      placeholder="Müşteri adı"
+      #bayiAd="ngModel"
+      [(ngModel)]="customer.bayiAd"
+      class="form-control"
+      name="bayiAd"
+      id="bayiAd"
+      required
+    />
     <div *ngIf="bayiAd.invalid && bayiAd.dirty" class="alert alert-danger">
       Bayi isimi gereklidir
     </div>
   </div>
   <div class="form-group">
-    <input type="text" placeholder="example@mail.com" #bayiMail="ngModel" [(ngModel)]="customer.bayiMail"
-      class="form-control" name="bayiMail" id="bayiMail" required />
+    <input
+      type="text"
+      placeholder="example@mail.com"
+      #bayiMail="ngModel"
+      [(ngModel)]="customer.bayiMail"
+      class="form-control"
+      name="bayiMail"
+      id="bayiMail"
+      required
+    />
     <div *ngIf="bayiMail.invalid && bayiMail.dirty" class="alert alert-danger">
       Bayi mail gereklidir
     </div>
   </div>
   <div class="form-group">
-    <textarea class="form-control" placeholder="Adres" #bayiAdres="ngModel" [(ngModel)]="customer.bayiAdres"
-      name="bayiAdres" id="bayiAdres" rows="3" required></textarea>
-    <div *ngIf="bayiAdres.invalid && bayiAdres.dirty" class="alert alert-danger">
+    <textarea
+      class="form-control"
+      placeholder="Adres"
+      #bayiAdres="ngModel"
+      [(ngModel)]="customer.bayiAdres"
+      name="bayiAdres"
+      id="bayiAdres"
+      rows="3"
+      required
+    ></textarea>
+    <div
+      *ngIf="bayiAdres.invalid && bayiAdres.dirty"
+      class="alert alert-danger"
+    >
       Adres gereklidir
     </div>
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="customerAddForm.invalid">
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="customerAddForm.invalid"
+  >
     Müşteri Ekle
   </button>
 </form>

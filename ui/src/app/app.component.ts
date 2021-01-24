@@ -19,4 +19,8 @@ export class AppComponent {
   logOut() {
     this.authService.logOut()
   }
+
+  openNav() {
+
+  }
 }
